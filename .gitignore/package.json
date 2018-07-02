@@ -1,0 +1,8 @@
+{
+  "name": "MickaBot",
+  "version": "1.0.0",
+  "description": "Mon bot discord.",
+  "main": "index.js",
+  "author": "Micka Gamer",
+  "dependencies": {}
+}

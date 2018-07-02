@@ -7,7 +7,7 @@ var prefix = ("/")
 
 //BOT CONNECTION
 client.on('ready', () => {
-  client.user.setActivity("I.A");
+  client.user.setActivity("I.A.");
 });
 
 //COMMANDE HELP

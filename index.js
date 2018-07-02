@@ -7,8 +7,7 @@ var prefix = ("/")
 
 //BOT CONNECTION
 client.on('ready', () => {
-  client.user.setActivity("I.A.");
-  console.log(`Bot connecté sous le compte: ${client.user.tag} !`);
+  client.user.setActivity("I.A");
 });
 
 //COMMANDE HELP

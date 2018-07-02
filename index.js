@@ -36,5 +36,3 @@ client.on('message', function (message){
         message.reply ('coucou')
     }
 });
-
-client.login(token);

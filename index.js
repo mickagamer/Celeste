@@ -73,7 +73,7 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('Ce membre ne fait pas parti du serveur !');
+        message.reply('Désolé, mais ce membre ne fait pas parti du serveur !');
       }
     } else {
       message.reply('Vous n\'avez pas mentionné l\'utilisateur pour le kick !');
@@ -95,7 +95,7 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('Ce membre ne fait pas parti du serveur !');
+        message.reply('Désolé, mais ce membre ne fait pas parti du serveur !');
       }
     } else {
       message.reply('Vous n\'avez pas mentionné l\'utilisateur pour le ban !');

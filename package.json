@@ -1,0 +1,11 @@
+{
+    "name": "celeste",
+    "version": "1.0.0",
+    "description": "Mon bot discord",
+    "main": "index.js",
+    "author": "micka",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^11.3.2"
+    }
+}

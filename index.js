@@ -37,19 +37,19 @@ client.on('message', function (message) {
       case "youtube":
           message.channel.sendMessage("https://www.youtube.com/channel/UCNzfQX6qJCyINXERTm8pPMw");
           break;
-}
+  }
 });
  
-
-// MESSAGE DE BIENVENUE - DEPART
+ 
+// MESSAGE DE BIENVENUE ET DEPART
 client.on('guildMemberAdd', member => {
-  client.channels.get(' ID CHANNEL DISCORD ').send('Bienvenue, ' + member.user.username);
+  client.channels.get(process.env.IDCHANNEL).send('Bienvenue, ' + member.user.username);
   member.createDM().then(channel => {
     return channel.send('Bienvenue sur le serveur ' + member.displayName)
   }).catch(console.error)
 });
 client.on('guildMemberRemove', member => {
-  client.channels.get(' ID CHANNEL DISCORD ').send('Au revoir, ' + member.user.username);
+  client.channels.get(process.env.IDCHANNEL).send('Au revoir, ' + member.user.username);
 });
 
 //COMMANDE KICK

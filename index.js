@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const newUsers = new Discord.Collection();
 const client = new Discord.Client();
-/*const config = require("./config.json");*/
 const responseObject = {
-  "twitch": "mickagamer_",
-  "twitter": "@micka69_"
+  "twitch": "https://www.twitch.tv/mickagamer_",
+  "twitter": "https://twitter.com/micka69_",
+  "youtube": "https://www.youtube.com/channel/UCNzfQX6qJCyINXERTm8pPMw"
 };
  
 
@@ -117,9 +117,5 @@ if(command === "purge") {
 }
 });
 
-
- 
-
- 
 // TOKEN BOT
 client.login(process.env.TOEKN);

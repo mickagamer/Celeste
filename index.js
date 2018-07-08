@@ -43,13 +43,13 @@ client.on('message', function (message) {
 
 // MESSAGE DE BIENVENUE - DEPART
 client.on('guildMemberAdd', member => {
-  client.channels.get('458325201478877197').send('Bienvenue, ' + member.user.username);
+  client.channels.get(' ID CHANNEL DISCORD ').send('Bienvenue, ' + member.user.username);
   member.createDM().then(channel => {
     return channel.send('Bienvenue sur le serveur ' + member.displayName)
   }).catch(console.error)
 });
 client.on('guildMemberRemove', member => {
-  client.channels.get('458325201478877197').send('Au revoir, ' + member.user.username);
+  client.channels.get(' ID CHANNEL DISCORD ').send('Au revoir, ' + member.user.username);
 });
 
 //COMMANDE KICK

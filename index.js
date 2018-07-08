@@ -1,50 +1,45 @@
 const Discord = require("discord.js");
 const newUsers = new Discord.Collection();
 const client = new Discord.Client();
-const responseObject = {
-  "twitch": "https://www.twitch.tv/mickagamer_",
-  "twitter": "https://twitter.com/micka69_",
-  "youtube": "https://www.youtube.com/channel/UCNzfQX6qJCyINXERTm8pPMw"
-};
- 
-
-var prefix = ("!");
 var PREFIX = ("!");
-
- 
-
- 
- 
-
+  
  
 //Connexion du bot
 client.on('ready', () => {
     client.user.setActivity("Help");
     console.log(`Connecté en tant que ${client.user.tag} (${client.user.id}) sur ${client.guilds.size} serveur(s).`);
   });
+ 
 
-//Réponse du bot avec commandes
-client.on("message", (message) => {
-  if(responseObject[message.content]) {
-    message.channel.send(responseObject[message.content]);
-  }
-});
-//réponse du bot simple
-client.on('message', function (message){
-    if (message.content === 'coucou'){
-        message.reply ('coucou')
-    }
-    if (message.content === 'ping') {
-      message.reply('pong !')
-    }
-});
 
- //COMMANDE HELP
-client.on('message', message => {
-  if (message.content === prefix + "help"){
-      message.channel.sendMessage("Liste des commandes: \n /help");
-  }
+
+client.on('message', function (message) {
+ 
+  if (message.author.equals(client.user)) return;
+  
+  if (!message.content.startsWith(PREFIX)) return;
+
+  var args = message.content.substring(PREFIX.length).split(" ");
+
+  switch (args[0].toLowerCase()) {
+      case "ping":
+          message.channel.sendMessage("Pong !");
+          break;
+      case "help":
+          message.channel.sendMessage("Liste des commandes: \n /help");
+          break;
+      case "twitch":
+          message.channel.sendMessage("https://www.twitch.tv/mickagamer_");
+          break;
+      case "twitter":
+          message.channel.sendMessage("https://twitter.com/micka69_");
+          break;
+      case "youtube":
+          message.channel.sendMessage("https://www.youtube.com/channel/UCNzfQX6qJCyINXERTm8pPMw");
+          break;
+}
 });
+ 
 
 // MESSAGE DE BIENVENUE - DEPART
 client.on('guildMemberAdd', member => {
